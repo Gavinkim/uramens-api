@@ -1,6 +1,12 @@
 # Uramens API
 
-## Local - DEV
+## 목표
+<pre>
+AWS ECR,ECS,RDS,FARGATE,S3,VPC,Load Balancer, GITHUB ACTIONS 를 활용하여 빌드/배포 자동화 서비스 구축 및 DDD 학습
+</pre>
+## 구성도
+
+## DEV
 ----------------------------------------
 - build gradle
 
