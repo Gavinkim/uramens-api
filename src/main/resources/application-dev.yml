@@ -1,0 +1,38 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    url: jdbc:mariadb://localhost:3306/uramens-dev?useLegacyDatetimecode=false&serverTimezone=Asia/Seoul&characterEncoding=utf8
+    username: admin
+    password: password
+    driver-class-name: org.mariadb.jdbc.Driver
+  jpa:
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+      ddl-auto: none
+    generate-ddl: false
+    show-sql: true
+    properties:
+      hibernate:
+        show-sql: true
+        format_sql: true
+        use_sql_comments: true
+    flyway:
+      baseline-version: 1
+logging:
+  level:
+    org:
+      hibernate:
+        type:
+          descriptior:
+            sql: trace
+
+cloud:
+  aws:
+    credentials:
+      accessKey: accessKey
+      secretKey: scretKey
+    region: ap-northeast-2
+    s3:
+      bucketName: sample-bucket
